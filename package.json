@@ -1,0 +1,26 @@
+{
+  "name": "interfaced",
+  "version": "0.0.0",
+  "description": "My silly little project to emulate interface behaviour in JavaScript",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Don't worry, be happy.\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GertSallaerts/interfaced.git"
+  },
+  "keywords": [
+    "interface",
+    "implement",
+    "class"
+  ],
+  "author": "Gert Sallaerts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GertSallaerts/interfaced/issues"
+  },
+  "homepage": "https://github.com/GertSallaerts/interfaced#readme"
+}
