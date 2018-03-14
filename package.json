@@ -18,8 +18,15 @@
   },
   "keywords": [
     "interface",
+    "interfaces",
     "implement",
-    "class"
+    "implements",
+    "class",
+    "classes",
+    "design pattern",
+    "loose coupling",
+    "high cohesion",
+    "design by interface"
   ],
   "author": "Gert Sallaerts",
   "license": "MIT",
