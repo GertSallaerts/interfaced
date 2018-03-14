@@ -1,6 +1,10 @@
 # Interfaced
 
-My silly little project to emulate interface behaviour in JavaScript.
+My silly little project to emulate interface behaviour in JavaScript. This will allow you to cram the concept of interfaces down JavaScript's throat. It works in Internet Explorer 11, which should be more than enough for anyone.
+
+See the usage section below for an example of what this package can do. In short, it allows you to create interface-methods that can be implemented on any class or object. You can be 100% sure whether or not something implements your interface because this lbrary guarantees they are unique.
+
+__Side note:__ If you are really committed to using interfaces, you're probably better off using something like [Flow](https://flow.org/) or [TypeScript](https://www.typescriptlang.org/). The upside of this library, I suppose, is that it works in plain-old JavaScript.
 
 ## Install
 
