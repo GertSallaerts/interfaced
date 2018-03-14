@@ -1,6 +1,6 @@
 {
   "name": "interfaced",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "My silly little project to emulate interface behaviour in JavaScript",
   "main": "index.js",
   "dependencies": {},
