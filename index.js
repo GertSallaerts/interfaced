@@ -1,26 +1,35 @@
-module.exports = function interfaced(name) {
-    var i = { name: name };
+function Interfaced(name) {
+    if (!(this instanceof Interfaced))
+        return new Interfaced(name);
 
-    i.implementedBy = function implementedBy(obj) {
-        return typeof obj[i] == 'function';
-    };
-
-    i.call = function call() {
-        var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
-        var obj = args.shift();
-
-        if (!i.implementedBy(obj))
-            throw new Error('Interface not implemented: ' + name);
-
-        return obj[i].apply(obj, args);
-    };
-
-    i.implementOn = function implementOn(c, func) {
-        if (typeof c !== 'function')
-            throw new Error('Cannot implement interface on ' + typeof c);
-
-        c.prototype[i] = func;
-    };
-
-    return i;
+    this.name = name;
 }
+
+Interfaced.prototype.implementedOn = function implementedOn(obj) {
+    return typeof obj[this] == 'function';
+};
+
+Interfaced.prototype.call = function call() {
+    var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+    var obj = args.shift();
+
+    return this.apply(obj, args);
+};
+
+Interfaced.prototype.apply = function apply(obj, args) {
+    if (!this.implementedOn(obj))
+        throw new Error('Interface not implemented: ' + name);
+
+    return obj[this].apply(obj, args);
+};
+
+Interfaced.prototype.implementOn = function implementOn(c, func) {
+    if (typeof c == 'function')
+        c.prototype[this] = func;
+    else if (c && typeof c == 'object')
+        c[this] = func;
+    else
+        throw new Error('Cannot implement interface on ' + typeof c);
+};
+
+module.exports = Interfaced;

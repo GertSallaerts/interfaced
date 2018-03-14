@@ -4,9 +4,13 @@
   "description": "My silly little project to emulate interface behaviour in JavaScript",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "mocha": "^5.0.4",
+    "sinon": "^4.4.5"
+  },
   "scripts": {
-    "test": "echo \"Don't worry, be happy.\""
+    "test": "eslint . && mocha"
   },
   "repository": {
     "type": "git",

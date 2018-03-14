@@ -16,7 +16,7 @@ const interfaced = require('interfaced');
 const iGetHttpResponse = interfaced('getHttpResponse');
 
 function serializeError(err) {
-    if (iGetHttpResponse.implementedBy(err))
+    if (iGetHttpResponse.implementedOn(err))
         return iGetHttpResponse.call(err);
     else
         return { status: 500 };
